@@ -93,20 +93,29 @@ p {
 
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    width: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50vh;
   }
   .img-banner {
     height: 100vh;
   }
   .img-info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     width: 50%;
-    float: right;
-    /* takes text and move it to the right side of the wrapper*/
   }
   .img-me {
+    background-image: url(./assets/imgs/gardener.jpg);
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding-top: 20px;
     width: 50%;
-    float: left;
+    height: 100%;
+    background-size: cover;
   }
   .img-info h2 {
     padding: 20px 0px 0px 30px;
