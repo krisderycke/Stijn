@@ -29,7 +29,12 @@ body {
   }
 }
 p {
-  padding: 0px 30px 20px;
+  padding: {
+    left: 30px;
+    right: 30px;
+    top: 20px;
+    bottom: 20px;
+  }
   font-family: arial;
   font-size: 16px;
   color: #111;
@@ -37,7 +42,17 @@ p {
 }
 
 .img-me {
-  width: 100%;
+  background-image: url(./assets/imgs/gardener.jpg);
+  padding-top: 20px;
+  height: 200px;
+  background-size: cover;
+}
+
+.img-shovel {
+  background-image: url(./assets/imgs/shovel.jpg);
+  padding-top: 20px;
+  height: 200px;
+  background-size: cover;
 }
 
 .parallax {
@@ -52,7 +67,7 @@ p {
   margin-top: 30px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) and (max-width: 999px) {
   .img-banner {
     display: block;
     width: 100%;
@@ -91,13 +106,16 @@ p {
   .img-me {
     padding-top: 30px;
   }
+  .img-shovel {
+    padding-top: 30px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    // width: 1000px;
     display: flex;
     height: 50vh;
+    align-items: center;
   }
 
   .img-banner {
@@ -107,27 +125,24 @@ p {
   .img-info {
     flex: 1;
     width: 50%;
-    // float: right; /* takes text and move it to the right side of the wrapper*/
   }
 
-  .img-me {
-    background-image: url(./assets/imgs/gardener.jpg);
-    flex: 1;
-    padding-top: 20px;
-    width: 50%;
-    height: 100%;
-    background-size: cover;
-
-    // float: left;
+  .info-two {
+    text-align: center;
+    margin-top: 50px;
+    p {
+      font-size: 30px;
+    }
   }
+
   .img-info {
     h2 {
       padding: 20px 0px 0px 30px;
     }
-    p {
-      padding: 20px 0px 0px 30px;
-      font-size: 30px;
-      white-space: 4px;
-    }
+  }
+  p {
+    padding: 20px 0px 0px 30px;
+    font-size: 20px;
+    white-space: 4px;
   }
 }
